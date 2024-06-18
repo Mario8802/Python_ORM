@@ -65,9 +65,7 @@ To start your own journey with this course:
 
 I welcome contributions! Please check out the [Contributing Guide](CONTRIBUTING.md) to learn how you can help.
 
-## 📬 Contact
 
-If you have any questions, feedback, or just want to connect, feel free to open an issue or reach out to me at [your-email@example.com](mailto:your-email@example.com).
 
 ---
 

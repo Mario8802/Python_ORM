@@ -115,3 +115,35 @@ class Exercise(models.Model):
     is_favourite = models.BooleanField(
         default=False,
     )
+
+
+class Exercise(models.Model):
+    name = models.CharField(
+        max_length=100,
+    )
+
+    description = models.TextField()
+
+    duration_minutes = models.PositiveIntegerField()
+
+    difficulty_level = models.CharField(
+        max_length=20,
+    )
+
+    equipment = models.CharField(
+        max_length=90,
+    )
+
+    video_url = models.URLField(
+        null=True,
+        blank=True,
+    )
+
+    calories_burned = models.PositiveIntegerField(
+        default=1,
+    )
+
+    is_favorite = models.BooleanField(
+        default=False,
+    )
+

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from main_app.models import EventRegistration, Student
+from main_app.models import EventRegistration, Student, Supplier
 
 
 # Register your models here.
@@ -24,5 +24,18 @@ class StudentAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Personal Information', {'fields': ('first_name', 'last_name', 'age', 'date_of_birth')}),
         ('Academic Information', {'fields': ('grade', )}),
+    )
+
+
+@admin.register(Supplier)
+class SupplierAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'phone')
+    list_filter = ('name', 'phone')
+    search_fields = ('email', 'contact_person', 'phone')
+    list_per_page = 20
+    fieldsets = (
+        ('Information', {
+            'fields': ('name', 'contact_person', 'email', 'address'),
+        }),
     )
 

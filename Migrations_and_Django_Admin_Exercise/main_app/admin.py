@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from main_app.models import EventRegistration, Student, Supplier
+from main_app.models import EventRegistration, Student, Supplier, Movie, Course
 
 
 # Register your models here.
@@ -9,10 +9,15 @@ from main_app.models import EventRegistration, Student, Supplier
 @admin.register(EventRegistration)
 class EventRegistrationAdmin(admin.ModelAdmin):
     list_display = ('event_name', 'participant_name', 'registration_date')
-
     list_filter = ('event_name', 'registration_date')
-
     search_fields = ('event_name', 'participant_name')
+
+
+@admin.register(Movie)
+class MovieAdmin(admin.ModelAdmin):
+    list_display = ('title', 'director', 'release_year', 'genre')
+    list_filter = ('release_year', 'genre')
+    search_fields = ('title', 'director')
 
 
 @admin.register(Student)
@@ -39,3 +44,16 @@ class SupplierAdmin(admin.ModelAdmin):
         }),
     )
 
+
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ('title', 'lecturer', 'price', 'start_date')
+    list_filter = ('is_published', 'lecturer')
+    search_fields = ('title', 'lecturer')
+    readonly_fields = ('start_date', )
+
+    fieldsets = (
+        ('Course Information', {'fields': ('title', 'lecturer', 'price', 'start_date', 'is_published')}),
+        ('Description', {'fields': ('description', )}),
+    )
+    

@@ -4,7 +4,7 @@ This repository contains materials and exercises for the Python ORM Course by So
 # 🎓 Python ORM Course Repository 
   
 Welcome to Mario's **Python ORM Course** repository! This repository serves as a comprehensive guide for learning Object-Relational Mapping (ORM) with Python, focusing on the Django framework and SQLAlchemy. Dive in to explore the fundamental and advanced concepts of ORM, backed by practical exercises.
-
+ 
 ![Python ORM](https://miro.medium.com/max/700/1*Hc3g5HLdjlB1gAYz3ir3gw.png)
 
 ## 📖 About the Course
